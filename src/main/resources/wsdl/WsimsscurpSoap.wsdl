@@ -1,0 +1,139 @@
+<WL5G3N0:definitions targetNamespace="http://www.openuri.org/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.openuri.org/" xmlns:WL5G3N2="http://www.w3.org/2001/XMLSchema" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/">
+   <WL5G3N0:types>
+      <WL5G3N2:schema elementFormDefault="qualified" targetNamespace="http://www.openuri.org/" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/http/" xmlns:WL5G3N5="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ope="http://www.openuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.openuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <WL5G3N2:element name="consultaCURP">
+            <WL5G3N2:complexType>
+               <WL5G3N2:sequence>
+                  <WL5G3N2:element minOccurs="0" name="entrada" type="ope:ParametrosConsulta"/>
+               </WL5G3N2:sequence>
+            </WL5G3N2:complexType>
+         </WL5G3N2:element>
+         <WL5G3N2:element name="consultaCURPResponse">
+            <WL5G3N2:complexType>
+               <WL5G3N2:sequence>
+                  <WL5G3N2:element minOccurs="0" name="consultaCURPResult" type="ope:CurpKioscosBean"/>
+               </WL5G3N2:sequence>
+            </WL5G3N2:complexType>
+         </WL5G3N2:element>
+         <WL5G3N2:element name="ConsultaDatosCURP">
+            <WL5G3N2:complexType>
+               <WL5G3N2:sequence>
+                  <WL5G3N2:element minOccurs="0" name="entrada" type="s:string"/>
+               </WL5G3N2:sequence>
+            </WL5G3N2:complexType>
+         </WL5G3N2:element>
+         <WL5G3N2:element name="ConsultaDatosCURPResponse">
+            <WL5G3N2:complexType>
+               <WL5G3N2:sequence>
+                  <WL5G3N2:element minOccurs="0" name="ConsultaDatosCURPResult" type="ope:CurpKioscosBean"/>
+               </WL5G3N2:sequence>
+            </WL5G3N2:complexType>
+         </WL5G3N2:element>
+         <WL5G3N2:element name="CurpKioscosBean" nillable="true" type="ope:CurpKioscosBean"/>
+         <WL5G3N2:complexType name="ParametrosConsulta">
+            <WL5G3N2:sequence>
+               <WL5G3N2:element minOccurs="0" name="Curp" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="ApellidoPaterno" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="ApellidoMaterno" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="Nombres" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="Sexo" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="FechNac" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="CveEntidadNac" type="s:string"/>
+            </WL5G3N2:sequence>
+         </WL5G3N2:complexType>
+         <WL5G3N2:complexType name="CurpKioscosBean">
+            <WL5G3N2:sequence>
+               <WL5G3N2:element name="AnioReg" type="s:int"/>
+               <WL5G3N2:element minOccurs="0" name="Apellido1" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="Apellido2" type="s:string"/>
+               <WL5G3N2:element name="CodigoError" type="s:int"/>
+               <WL5G3N2:element name="CRIP" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="Curp" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="CveEntidadEmisora" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="CveEntidadNac" type="s:string"/>
+               <WL5G3N2:element name="CveMunicipioReg" type="s:int"/>
+               <WL5G3N2:element name="DocProbatorio" type="s:int"/>
+               <WL5G3N2:element minOccurs="0" name="FechNac" type="s:string"/>
+               <WL5G3N2:element name="Foja" type="s:int"/>
+               <WL5G3N2:element name="FolioCarta" type="s:int"/>
+               <WL5G3N2:element name="Libro" type="s:int"/>
+               <WL5G3N2:element minOccurs="0" name="Message" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="Nacionalidad" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="Nombres" type="s:string"/>
+               <WL5G3N2:element name="NumEntidadReg" type="s:int"/>
+               <WL5G3N2:element name="NumRegExtranjeros" type="s:int"/>
+               <WL5G3N2:element minOccurs="0" name="Sexo" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="StatusOper" type="s:string"/>
+               <WL5G3N2:element name="TipoError" type="s:int"/>
+               <WL5G3N2:element name="Tomo" type="s:int"/>
+               <WL5G3N2:element minOccurs="0" name="EstatusCURP" type="s:string"/>
+               <WL5G3N2:element name="NumActa" type="s:int"/>
+               <WL5G3N2:element minOccurs="0" name="DesMunicipio" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="DesEntidadNac" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="DesEntidadRegistro" type="s:string"/>
+               <WL5G3N2:element minOccurs="0" name="DesEstatusCURP" type="s:string"/>
+            </WL5G3N2:sequence>
+         </WL5G3N2:complexType>
+      </WL5G3N2:schema>
+   </WL5G3N0:types>
+   <WL5G3N0:message name="consultaCURPSoapIn">
+      <WL5G3N0:part element="WL5G3N1:consultaCURP" name="parameters"/>
+   </WL5G3N0:message>
+   <WL5G3N0:message name="consultaCURPSoapOut">
+      <WL5G3N0:part element="WL5G3N1:consultaCURPResponse" name="parameters"/>
+   </WL5G3N0:message>
+   <WL5G3N0:message name="ConsultaDatosCURPSoapIn">
+      <WL5G3N0:part element="WL5G3N1:ConsultaDatosCURP" name="parameters"/>
+   </WL5G3N0:message>
+   <WL5G3N0:message name="ConsultaDatosCURPSoapOut">
+      <WL5G3N0:part element="WL5G3N1:ConsultaDatosCURPResponse" name="parameters"/>
+   </WL5G3N0:message>
+   <WL5G3N0:message name="ConsultaDatosCURPHttpGetIn">
+      <WL5G3N0:part name="entrada" type="WL5G3N2:string"/>
+   </WL5G3N0:message>
+   <WL5G3N0:message name="ConsultaDatosCURPHttpGetOut">
+      <WL5G3N0:part element="WL5G3N1:CurpKioscosBean" name="Body"/>
+   </WL5G3N0:message>
+   <WL5G3N0:message name="ConsultaDatosCURPHttpPostIn">
+      <WL5G3N0:part name="entrada" type="WL5G3N2:string"/>
+   </WL5G3N0:message>
+   <WL5G3N0:message name="ConsultaDatosCURPHttpPostOut">
+      <WL5G3N0:part element="WL5G3N1:CurpKioscosBean" name="Body"/>
+   </WL5G3N0:message>
+   <WL5G3N0:portType name="wsimsscurpSoap">
+      <WL5G3N0:operation name="consultaCURP">
+         <WL5G3N0:input message="WL5G3N1:consultaCURPSoapIn"/>
+         <WL5G3N0:output message="WL5G3N1:consultaCURPSoapOut"/>
+      </WL5G3N0:operation>
+      <WL5G3N0:operation name="ConsultaDatosCURP">
+         <WL5G3N0:input message="WL5G3N1:ConsultaDatosCURPSoapIn"/>
+         <WL5G3N0:output message="WL5G3N1:ConsultaDatosCURPSoapOut"/>
+      </WL5G3N0:operation>
+   </WL5G3N0:portType>
+   <WL5G3N0:binding name="wsimsscurpSoap" type="WL5G3N1:wsimsscurpSoap">
+      <WL5G3N3:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+      <WL5G3N0:operation name="consultaCURP">
+         <WL5G3N3:operation soapAction="http://www.openuri.org/consultaCURP" style="document"/>
+         <WL5G3N0:input>
+            <WL5G3N3:body use="literal"/>
+         </WL5G3N0:input>
+         <WL5G3N0:output>
+            <WL5G3N3:body use="literal"/>
+         </WL5G3N0:output>
+      </WL5G3N0:operation>
+      <WL5G3N0:operation name="ConsultaDatosCURP">
+         <WL5G3N3:operation soapAction="http://www.openuri.org/ConsultaDatosCURP" style="document"/>
+         <WL5G3N0:input>
+            <WL5G3N3:body use="literal"/>
+         </WL5G3N0:input>
+         <WL5G3N0:output>
+            <WL5G3N3:body use="literal"/>
+         </WL5G3N0:output>
+      </WL5G3N0:operation>
+   </WL5G3N0:binding>
+   <WL5G3N0:service name="wsimsscurpSoapQSService">
+      <WL5G3N0:port binding="WL5G3N1:wsimsscurpSoap" name="wsimsscurpSoapQSPort">
+         <WL5G3N3:address location="${renapo.url}"/>
+      </WL5G3N0:port>
+   </WL5G3N0:service>
+</WL5G3N0:definitions>
